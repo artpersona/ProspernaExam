@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "90113195123",
+    "project_id": "prosperna-dd4dd",
+    "storage_bucket": "prosperna-dd4dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:90113195123:android:c2981d734fa6fe8bdabe06",
+        "android_client_info": {
+          "package_name": "com.prospernaexam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "90113195123-lh9sgrg0t2lq763sef0l3g2t8jr9orss.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXJORF8YqdRJFl9TFiXXgDAacCINL15Nw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "90113195123-lh9sgrg0t2lq763sef0l3g2t8jr9orss.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
