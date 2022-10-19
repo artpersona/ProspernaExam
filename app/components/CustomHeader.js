@@ -5,6 +5,7 @@ import {RFValue} from 'react-native-responsive-fontsize';
 import {useNavigation, DrawerActions} from '@react-navigation/native';
 import {useConfigContext} from '../shared/contexts/ConfigContext';
 import {useShopContext} from '../shared/contexts/ShopContext';
+import {useAuthContext} from '../shared/contexts/AuthContext';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {Colors} from '../shared/layouts';
 function CustomHeader({showBackButton, headerName, hideCart}) {
@@ -12,6 +13,7 @@ function CustomHeader({showBackButton, headerName, hideCart}) {
   const navigation = useNavigation();
   const {drawerStatus} = useConfigContext();
   const {cart} = useShopContext();
+  const {loggedUser} = useAuthContext();
 
   const handleDrawerToggle = () => {
     navigation.dispatch(DrawerActions.toggleDrawer());
@@ -48,7 +50,7 @@ function CustomHeader({showBackButton, headerName, hideCart}) {
         </View>
       )}
 
-      {!hideCart && (
+      {!hideCart && loggedUser?.role !== 'admin' && (
         <TouchableOpacity onPress={navigateToCart}>
           <MaterialCommunityIcons
             name="cart"
